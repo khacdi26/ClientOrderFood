@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".Activity.ProfileActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primary"
@@ -39,7 +39,7 @@
             android:background="@drawable/baseline_edit_24"
             android:backgroundTint="@color/white"
             android:contentDescription="TODO" />
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"

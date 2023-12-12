@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context=".Activity.PaymentActivity">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/primary"
@@ -30,7 +30,7 @@
             android:textSize="22sp"
             android:layout_gravity="center" />
 
-    </Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
     <ScrollView
         android:layout_width="match_parent"

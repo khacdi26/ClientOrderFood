@@ -12,7 +12,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/primary"
@@ -38,7 +38,7 @@
                 android:layout_height="48dp"
                 android:background="@drawable/baseline_search_24"
                 tools:ignore="RtlHardcoded" />-->
-            <SearchView
+            <androidx.appcompat.widget.SearchView
                 android:id="@+id/btnSearchS"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -47,7 +47,7 @@
                 android:iconifiedByDefault="false"
 
                 />
-        </Toolbar>
+        </androidx.appcompat.widget.Toolbar>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcvSearch"
