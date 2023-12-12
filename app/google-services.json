@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "768919630456",
+    "project_id": "dacn-1b8f8",
+    "storage_bucket": "dacn-1b8f8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:768919630456:android:973030d3f2f43c5e55b38d",
+        "android_client_info": {
+          "package_name": "com.example.dacnapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZpKGmyKMuHyOpOlWQulnX004dxC7K-m8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

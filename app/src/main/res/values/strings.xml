@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">DACNAPP</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_Search">Search</string>
+    <string name="nav_Cart">Cart</string>
+    <string name="nav_Account">Account</string>
+    <string name="nav_MyProfile">My Profile</string>
+    <string name="nav_ChangePassword">Change Password</string>
+
+    <string name="nav_draw_open">Open navigation drawer</string>
+    <string name="nav_draw_close">Close navigation drawer</string>
+    <string name="nav_Order">Order</string>
+    <string name="default_web_client_id">768919630456-fchocg8rjkjutajnsqnanr47e3gp7aao.apps.googleusercontent.com</string>
+
+</resources>

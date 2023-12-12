@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.PaymentActivity">
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primary"
+        android:title="">
+
+        <ImageButton
+            android:id="@+id/btnBackPayment"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="start"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:backgroundTint="@color/white"
+            android:contentDescription="TODO" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thanh toán"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_gravity="center" />
+
+    </Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:padding="10dp"
+                android:text="Họ và tên"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtFullNamePmt"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_btn_3"
+                android:hint="Full name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+            <TextView
+                android:padding="10dp"
+                android:text="Số điện thoại"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/edtPhoneNumPmt"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:background="@drawable/custom_btn_3"
+                android:hint="Phone number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp" />
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:padding="10dp"
+                android:text="Phòng thuê"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txtRoomNumPmt"
+                android:elevation="10dp"
+                android:background="@drawable/custom_btn_3"
+                android:padding="10dp"
+                android:hint="Bạn đang không thuê phòng"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+
+                <TextView
+                    android:padding="10dp"
+                    android:text="Tổng thanh toán:"
+                    android:textSize="18sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/txtTotalPricePmt"
+                    android:text="100000"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnCashPay"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_btn_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:paddingHorizontal="20dp"
+                android:drawableStart="@drawable/baseline_monetization_on_24"
+                android:textSize="18sp"
+                android:text="Thanh toán khi trả phòng" />
+
+            <Button
+                android:id="@+id/btnZaloPay"
+                android:paddingHorizontal="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/custom_btn_1"
+                android:backgroundTint="#008FE5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:drawableStart="@mipmap/ic_zalo_24"
+                android:text="Thanh toán ZaloPay" />
+
+            <com.paypal.checkout.paymentbutton.PaymentButtonContainer
+                android:id="@+id/payment_button_container"
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:paypal_button_color="blue"
+                app:paypal_button_label="pay"
+                app:paypal_button_shape="rectangle"
+                app:paypal_button_size="large"
+                app:paypal_button_enabled="true" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.DetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/primary"
+            android:layout_gravity="top"
+
+            android:title="">
+
+            <ImageButton
+                android:id="@+id/btnBackDetail"
+                android:layout_margin="10dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="start"
+                android:background="@drawable/baseline_arrow_back_24"
+                android:backgroundTint="@color/white"
+                android:contentDescription="TODO" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:layout_gravity="right"
+                tools:ignore="RtlHardcoded"
+                android:focusable="true"
+                android:clipToPadding="false">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnCartDetail"
+                    android:backgroundTint="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity=""
+                    android:background="@drawable/baseline_shopping_cart_24" />
+
+                <TextView
+                    android:id="@+id/txtCartBadgeDetail"
+                    android:layout_height="22dp"
+                    android:layout_width="22dp"
+                    android:text="555"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/badge_shape"
+                    android:layout_marginEnd="-8dp"
+                    android:layout_marginTop="-8dp"
+                    android:gravity="center"
+                    style="@style/TextAppearance.MaterialComponents.Caption" />
+
+            </FrameLayout>
+        </Toolbar>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="62dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:elevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#227849"
+                    android:orientation="vertical">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvListImage"
+                        android:layout_width="300dp"
+                        android:layout_gravity="center"
+                        android:layout_height="300dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/text_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:padding="20dp"
+                    android:text="title" />
+
+                <TextView
+                    android:id="@+id/text_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="20dp"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="price" />
+
+                <TextView
+                    android:id="@+id/text_description"
+                    android:layout_width="match_parent"
+                    android:paddingHorizontal="20dp"
+                    android:textStyle="bold"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả món ăn: " />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomTool"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="10dp"
+        android:weightSum="2"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btnAddToCart"
+            android:layout_width="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:text="Thêm vào giỏ hàng"
+            android:layout_marginHorizontal="10dp"
+            android:textColor="@color/primary"
+            android:layout_weight="1"
+            android:padding="10dp"
+            android:background="@drawable/custom_btn_2" />
+
+        <Button
+            android:layout_width="1dp"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:text="Đặt món ngay"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:background="@drawable/custom_btn_1" />
+    </LinearLayout>
+
+</FrameLayout>

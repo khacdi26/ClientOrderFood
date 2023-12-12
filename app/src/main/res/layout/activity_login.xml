@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.LoginActivity"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginBottom="24dp" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edtPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:inputType="textPassword"
+        android:hint="Mật khẩu" />
+
+    <TextView
+        android:id="@+id/btnQuenMatKhau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bạn quên mật khẩu ư?"
+        android:textSize="18sp"
+        android:gravity="end" />
+
+    <Button
+        android:id="@+id/btnDangNhap"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_btn_1"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Đăng nhập" />
+
+    <TextView
+        android:id="@+id/txtHoac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hoặc"
+        android:textSize="18sp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnDangNhapFacebook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Tiếp tục với Facebook" />
+
+    <Button
+        android:id="@+id/btnDangNhapGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/googleg_standard_color_18"
+        android:textSize="18sp"
+        android:text="Tiếp tục với Google" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Bạn chưa có tài khoản?" />
+
+        <TextView
+            android:id="@+id/btnDangKy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/primary"
+            android:text=" Đăng ký ngay." />
+    </LinearLayout>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
