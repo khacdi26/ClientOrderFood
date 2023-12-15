@@ -112,14 +112,36 @@
                     android:layout_height="1dp"
                     android:background="#80AAAAAA" />
 
-                <TextView
-                    android:id="@+id/txtStatusOrderDetail"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:orientation="horizontal"
                     android:padding="10dp"
-                    android:text="Thanh toán thành công qua "
-                    android:textSize="16sp" />
+                    android:weightSum="2">
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/txtStatusOrderDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="5dp"
+                        android:layout_gravity="center"
+                        android:text="Đơn hàng đang được giao đến bạn"
+                        android:textSize="16sp" />
+                    <Button
+                        android:id="@+id/btnXacNhanDeOr"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="Xác nhận đã nhận hàng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:background="@drawable/custom_btn_1"/>
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#80AAAAAA" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

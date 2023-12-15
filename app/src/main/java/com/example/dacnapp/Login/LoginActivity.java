@@ -17,6 +17,7 @@ import android.widget.Toast;
 import com.example.dacnapp.MainActivity;
 import com.example.dacnapp.Model.User;
 import com.example.dacnapp.R;
+import com.facebook.CallbackManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -40,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText edtEmail, edtPassword;
     private ProgressDialog progressDialog;
     private TextView btnDangKy;
+    private CallbackManager callbackManager;
     int RC_SIGN_IN = 20;
 
     GoogleSignInClient mGoogleSignInClient;
@@ -86,6 +88,7 @@ public class LoginActivity extends AppCompatActivity {
                 onClickDangNhap();
             }
         });
+
     }
 
     private void googleSignIn() {
