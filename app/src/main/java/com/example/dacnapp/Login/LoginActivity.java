@@ -31,6 +31,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthCredential;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Objects;
@@ -118,14 +119,33 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             FirebaseUser user = auth.getCurrentUser();
-                            User mUser = new User(user.getEmail(), null, null,
-                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpRGUcBVltEkFutN21fIqebRvrgP7fOv4CjcNwuka3BtXR_-jhpd7GheJ_RkvMtSsnsA8&usqp=CAU",
-                                    null, null, null);
-                            FirebaseFirestore.getInstance().collection("Users")
-                                    .document(user.getUid()).set(mUser);
-                            Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                            startActivity(intent);
-                            finishAffinity();
+                            firestore = FirebaseFirestore.getInstance();
+                            firestore.collection("Users").document(user.getUid())
+                                    .get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                DocumentSnapshot document = task.getResult();
+                                                if (document.exists()) {
+                                                    // Tài liệu đã tồn tại cho người dùng hiện tại
+                                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                    startActivity(intent);
+                                                    finishAffinity();
+                                                } else {
+                                                    // Tài liệu chưa tồn tại cho người dùng hiện tại
+                                                    // Thêm mới tài liệu
+                                                    User mUser = new User(user.getEmail(), null, null,
+                                                                           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpRGUcBVltEkFutN21fIqebRvrgP7fOv4CjcNwuka3BtXR_-jhpd7GheJ_RkvMtSsnsA8&usqp=CAU",
+                                                                            null, null, null);
+                                                    FirebaseFirestore.getInstance().collection("Users")
+                                                            .document(user.getUid()).set(mUser);
+                                                    Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                                    startActivity(intent);
+                                                    finishAffinity();
+                                                }
+                                            }
+                                        }
+                                    });
                         }
                     }
                 });

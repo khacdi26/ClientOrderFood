@@ -15,7 +15,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.SearchView;
+import androidx.appcompat.widget.SearchView;
 
 
 import com.example.dacnapp.Adapter.NonScrollableGridLayoutManager;
@@ -47,18 +47,19 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         initUi();
+        initListener();
+        searchView.performClick();
+        searchView.requestFocus();
+    }
 
+    private void initListener() {
         btnBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
-
-
     }
-
-
 
 
     private void initUi() {
@@ -104,5 +105,6 @@ public class SearchActivity extends AppCompatActivity {
                 return false;
             }
         });
+
     }
 }
